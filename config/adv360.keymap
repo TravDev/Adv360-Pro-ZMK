@@ -87,7 +87,7 @@
         mac_toggle: mac_toggle {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap>, <&out OUT_BLE &bt BT_SEL 1 &to 5>;
+            bindings = <&macro_tap>, <&out OUT_BLE &bt BT_SEL 1 &to 1>;
 
             label = "MAC_TOGGLE";
         };
@@ -106,27 +106,37 @@
 
         default_layer {
             bindings = <
-&kp ESCAPE                    &kp N1          &kp N2          &kp N3              &kp N4            &kp N5  &tog 4                                                       &mo 3      &kp N6  &kp N7             &kp N8               &kp N9           &kp N0              &kp MINUS
-&kp TAB                       &kp Q           &kp W           &kp E               &kp R             &kp T   &to 5                                                        &none      &kp Y   &kp U              &kp I                &kp O            &kp P               &kp BSLH
-&tog 1                        &hm LEFT_GUI A  &hm LEFT_ALT S  &hm LEFT_CONTROL D  &hm LEFT_SHIFT F  &kp G   &mac_toggle  &kp LCTRL  &kp ENTER      &kp LGUI   &kp RCTRL  &none      &kp H   &hm RIGHT_SHIFT J  &hm RIGHT_CONTROL K  &hm RIGHT_ALT L  &hm RIGHT_GUI SEMI  &kp SQT
+&kp ESCAPE                    &kp N1          &kp N2          &kp N3              &kp N4            &kp N5  &tog 5                                                       &mo 4      &kp N6  &kp N7             &kp N8               &kp N9           &kp N0              &kp MINUS
+&kp TAB                       &kp Q           &kp W           &kp E               &kp R             &kp T   &to 1                                                        &none      &kp Y   &kp U              &kp I                &kp O            &kp P               &kp BSLH
+&tog 2                        &hm LEFT_GUI A  &hm LEFT_ALT S  &hm LEFT_CONTROL D  &hm LEFT_SHIFT F  &kp G   &mac_toggle  &kp LCTRL  &kp ENTER      &kp LGUI   &kp RCTRL  &none      &kp H   &hm RIGHT_SHIFT J  &hm RIGHT_CONTROL K  &hm RIGHT_ALT L  &hm RIGHT_GUI SEMI  &kp SQT
 &hm_shft LEFT_SHIFT CAPSLOCK  &kp Z           &kp X           &kp C               &kp V             &kp B                           &kp HOME       &kp PG_UP                        &kp N   &kp M              &kp COMMA            &kp DOT          &kp FSLH            &hm_shft RIGHT_SHIFT CAPSLOCK
-&mo 2                         &kp EQUAL       &kp GRAVE       &kp LEFT            &kp RIGHT                 &kp BSPC     &kp DEL    &kp END        &kp PG_DN  &kp SPACE  &kp ENTER          &kp UP             &kp DOWN             &kp LBKT         &kp RBKT            &mo 2
+&mo 3                         &kp EQUAL       &kp GRAVE       &kp LEFT            &kp RIGHT                 &kp BSPC     &kp DEL    &kp END        &kp PG_DN  &kp SPACE  &kp ENTER          &kp UP             &kp DOWN             &kp LBKT         &kp RBKT            &mo 3
+            >;
+        };
+
+        mac_osx {
+            bindings = <
+&kp ESCAPE                    &kp N1              &kp N2          &kp N3          &kp N4            &kp N5  &tog 5                                                          &mo 4      &kp N6  &kp N7             &kp N8           &kp N9           &kp N0                  &kp MINUS
+&kp TAB                       &kp Q               &kp W           &kp E           &kp R             &kp T   &to 0                                                           &none      &kp Y   &kp U              &kp I            &kp O            &kp P                   &kp BSLH
+&tog 2                        &hm LEFT_CONTROL A  &hm LEFT_ALT S  &hm LEFT_GUI D  &hm LEFT_SHIFT F  &kp G   &win_toggle  &kp LEFT_GUI  &kp ENTER      &kp LGUI   &kp RCTRL  &none      &kp H   &hm RIGHT_SHIFT J  &hm RIGHT_GUI K  &hm RIGHT_ALT L  &hm RIGHT_CONTROL SEMI  &kp SQT
+&hm_shft LEFT_SHIFT CAPSLOCK  &kp Z               &kp X           &kp C           &kp V             &kp B                              &mac_sol       &kp PG_UP                        &kp N   &kp M              &kp COMMA        &kp DOT          &kp FSLH                &hm_shft RIGHT_SHIFT CAPSLOCK
+&mo 3                         &kp EQUAL           &kp GRAVE       &kp LEFT        &kp RIGHT                 &kp BSPC     &kp DEL       &mac_eol       &kp PG_DN  &kp SPACE  &kp ENTER          &kp UP             &kp DOWN         &kp LBKT         &kp RBKT                &mo 3
             >;
         };
 
         layer_keypad {
             bindings = <
-&kp ESCAPE  &kp N1            &kp N2             &kp N3                &kp N4                      &kp N5  &trans                                                    &mo 3      &kp N6  &kp NUMBER_7  &kp N8          &kp N9         &kp N0         &kp MINUS
+&kp ESCAPE  &kp N1            &kp N2             &kp N3                &kp N4                      &kp N5  &trans                                                    &mo 4      &kp N6  &kp NUMBER_7  &kp N8          &kp N9         &kp N0         &kp MINUS
 &kp TAB     &none             &none              &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS       &none   &none                                                     &none      &none   &kp PG_UP     &kp UP_ARROW    &kp PAGE_DOWN  &none          &kp BACKSLASH
 &trans      &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_BRACE        &hm LEFT_SHIFT RIGHT_BRACE  &none   &none     &kp LCTRL  &kp ENTER      &kp LGUI   &kp RCTRL  &none      &none   &kp LEFT      &kp DOWN_ARROW  &kp RIGHT      &kp SEMICOLON  &kp SQT
 &kp LSHFT   &none             &none              &none                 &none                       &none                        &kp HOME       &kp PG_UP                        &none   &kp HOME      &none           &kp END        &kp SLASH      &kp RSHFT
-&mo 2       &kp EQUAL         &kp INSERT         &kp LEFT              &kp RIGHT                           &kp BSPC  &kp DEL    &kp END        &kp PG_DN  &kp SPACE  &kp ENTER          &kp UP        &kp DOWN        &none          &none          &mo 2
+&mo 3       &kp EQUAL         &kp INSERT         &kp LEFT              &kp RIGHT                           &kp BSPC  &kp DEL    &kp END        &kp PG_DN  &kp SPACE  &kp ENTER          &kp UP        &kp DOWN        &none          &none          &mo 3
             >;
         };
 
         layer_fn {
             bindings = <
-&kp F1  &kp F2  &kp F3    &kp F4  &kp F5  &kp F6  &tog 1                                      &mo 3   &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
+&kp F1  &kp F2  &kp F3    &kp F4  &kp F5  &kp F6  &tog 2                                      &mo 4   &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
 &trans  &trans  &trans    &trans  &trans  &trans  &none                                       &none   &trans  &trans  &trans  &trans   &trans   &trans
 &trans  &trans  &sql_ssf  &trans  &trans  &trans  &none   &trans  &trans      &trans  &trans  &none   &trans  &trans  &trans  &trans   &trans   &trans
 &trans  &trans  &trans    &trans  &trans  &trans                  &trans      &trans                  &trans  &trans  &trans  &trans   &trans   &trans
@@ -146,21 +156,11 @@
 
         num_keys {
             bindings = <
-&kp ESCAPE  &kp N1            &kp N2             &kp N3                &kp N4                      &kp N5  &trans                                                    &mo 3            &kp N6  &kp KP_NUMLOCK   &kp EQUAL        &kp KP_DIVIDE    &kp ASTERISK  &kp MINUS
+&kp ESCAPE  &kp N1            &kp N2             &kp N3                &kp N4                      &kp N5  &trans                                                    &mo 4            &kp N6  &kp KP_NUMLOCK   &kp EQUAL        &kp KP_DIVIDE    &kp ASTERISK  &kp MINUS
 &kp TAB     &none             &none              &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS       &none   &none                                                     &none            &none   &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp MINUS     &kp BACKSLASH
 &trans      &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_BRACE        &hm LEFT_SHIFT RIGHT_BRACE  &none   &none     &kp LCTRL  &kp ENTER      &kp LGUI   &kp RCTRL  &none            &none   &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp PLUS      &kp SQT
 &kp LSHFT   &none             &none              &none                 &none                       &none                        &kp HOME       &kp PG_UP                              &none   &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_ENTER  &kp RSHFT
-&mo 2       &kp EQUAL         &kp INSERT         &kp LEFT              &kp RIGHT                           &kp BSPC  &kp DEL    &kp END        &kp PG_DN  &kp SPACE  &kp KP_NUMBER_0          &kp UP           &kp DOWN         &kp DOT          &none         &mo 2
-            >;
-        };
-
-        mac_osx {
-            bindings = <
-&kp ESCAPE                    &kp N1              &kp N2          &kp N3          &kp N4            &kp N5  &tog 4                                                          &mo 3      &kp N6  &kp N7             &kp N8           &kp N9           &kp N0                  &kp MINUS
-&kp TAB                       &kp Q               &kp W           &kp E           &kp R             &kp T   &to 0                                                           &none      &kp Y   &kp U              &kp I            &kp O            &kp P                   &kp BSLH
-&tog 1                        &hm LEFT_CONTROL A  &hm LEFT_ALT S  &hm LEFT_GUI D  &hm LEFT_SHIFT F  &kp G   &win_toggle  &kp LEFT_GUI  &kp ENTER      &kp LGUI   &kp RCTRL  &none      &kp H   &hm RIGHT_SHIFT J  &hm RIGHT_GUI K  &hm RIGHT_ALT L  &hm RIGHT_CONTROL SEMI  &kp SQT
-&hm_shft LEFT_SHIFT CAPSLOCK  &kp Z               &kp X           &kp C           &kp V             &kp B                              &mac_sol       &kp PG_UP                        &kp N   &kp M              &kp COMMA        &kp DOT          &kp FSLH                &hm_shft RIGHT_SHIFT CAPSLOCK
-&mo 2                         &kp EQUAL           &kp GRAVE       &kp LEFT        &kp RIGHT                 &kp BSPC     &kp DEL       &mac_eol       &kp PG_DN  &kp SPACE  &kp ENTER          &kp UP             &kp DOWN         &kp LBKT         &kp RBKT                &mo 2
+&mo 3       &kp EQUAL         &kp INSERT         &kp LEFT              &kp RIGHT                           &kp BSPC  &kp DEL    &kp END        &kp PG_DN  &kp SPACE  &kp KP_NUMBER_0          &kp UP           &kp DOWN         &kp DOT          &none         &mo 3
             >;
         };
     };
