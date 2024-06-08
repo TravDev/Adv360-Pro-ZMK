@@ -13,6 +13,7 @@
 #include <dt-bindings/zmk/backlight.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/rgb.h>
 
 / {
@@ -86,15 +87,7 @@
         mac_toggle: mac_toggle {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&mo 3>,
-                <&macro_tap>,
-                <&bt BT_SEL 1>,
-                <&macro_release>,
-                <&mo 3>,
-                <&macro_tap>,
-                <&tog 5>;
+            bindings = <&macro_tap>, <&out OUT_BLE &bt BT_SEL 1 &tog 5>;
 
             label = "MAC_TOGGLE";
         };
@@ -102,15 +95,7 @@
         win_toggle: win_toggle {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&mo 3>,
-                <&macro_tap>,
-                <&bt BT_DISC 1>,
-                <&macro_release>,
-                <&mo 3>,
-                <&macro_tap>,
-                <&tog 0>;
+            bindings = <&macro_tap>, <&out OUT_USB &tog 0>;
 
             label = "WIN_TOGGLE";
         };
