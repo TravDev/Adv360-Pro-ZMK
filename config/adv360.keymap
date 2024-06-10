@@ -29,7 +29,7 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
 
-            hold-trigger-key-positions = <29 30 32 41 42 43 31 44>;
+            hold-trigger-key-positions = <30 32 41 42 43 31 44>;
         };
 
         hm_shft: hm_shft {
