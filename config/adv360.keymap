@@ -101,6 +101,25 @@
         };
     };
 
+    combos {
+        compatible = "zmk,combos";
+
+        c_home {
+            bindings = <&kp HOME>;
+            key-positions = <35 41>;
+        };
+
+        c_end {
+            bindings = <&kp END>;
+            key-positions = <35 43>;
+        };
+
+        c_sublime_replace {
+            bindings = <&kp LC(H)>;
+            key-positions = <36 18>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
