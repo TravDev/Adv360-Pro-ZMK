@@ -116,7 +116,7 @@
 
         c_sublime_replace {
             bindings = <&kp LC(H)>;
-            key-positions = <36 18>;
+            key-positions = <18 35>;
         };
     };
 
