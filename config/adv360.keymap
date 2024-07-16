@@ -106,12 +106,12 @@
 
         c_home {
             bindings = <&kp HOME>;
-            key-positions = <35 41>;
+            key-positions = <41 32>;
         };
 
         c_end {
             bindings = <&kp END>;
-            key-positions = <35 43>;
+            key-positions = <43 32>;
         };
 
         c_sublime_replace {
