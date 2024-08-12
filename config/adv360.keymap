@@ -108,6 +108,16 @@
 
             label = "WIN_TOGGLE";
         };
+
+        sql_dist: sql_dist {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_tap>,
+                <&kp LS(S) &kp LS(E) &kp LS(L) &kp LS(E) &kp LS(C) &kp LS(T) &kp SPACE &kp LS(D) &kp LS(I) &kp LS(S) &kp LS(T) &kp LS(I) &kp LS(N) &kp LS(C) &kp LS(T) &kp SPACE>;
+
+            label = "SQL_DIST";
+        };
     };
 
     combos {
