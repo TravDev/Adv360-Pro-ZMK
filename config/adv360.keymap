@@ -16,6 +16,12 @@
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/rgb.h>
 
+&lt {
+    tapping-term-ms = <240>;
+    quick-tap-ms = <150>;
+    flavor = "balanced";
+};
+
 / {
     behaviors {
         #include "macros.dtsi"
