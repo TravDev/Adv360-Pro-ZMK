@@ -126,11 +126,13 @@
         c_home {
             bindings = <&kp HOME>;
             key-positions = <41 32>;
+            layers = <0>;
         };
 
         c_end {
             bindings = <&kp END>;
             key-positions = <43 32>;
+            layers = <0>;
         };
 
         c_sublime_replace {
