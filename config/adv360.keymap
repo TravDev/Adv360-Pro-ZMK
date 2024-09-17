@@ -177,21 +177,21 @@
 
         nav {
             bindings = <
-&trans  &trans  &trans     &trans          &trans         &trans  &trans                                      &trans  &trans  &trans       &trans          &trans         &trans  &trans
-&trans  &trans  &kp HOME   &kp UP_ARROW    &kp END        &trans  &trans                                      &none   &none   &kp HOME     &kp UP_ARROW    &kp END        &none   &trans
-&trans  &trans  &kp LEFT   &kp DOWN_ARROW  &kp RIGHT      &trans  &trans  &trans  &trans      &trans  &trans  &none   &none   &kp LEFT     &kp DOWN_ARROW  &kp RIGHT      &trans  &trans
-&trans  &trans  &kp PG_UP  &trans          &kp PAGE_DOWN  &trans                  &trans      &trans                  &none   &kp PAGE_UP  &none           &kp PAGE_DOWN  &trans  &trans
-&trans  &trans  &trans     &trans          &trans                 &trans  &trans  &trans      &trans  &trans  &trans          &trans       &trans          &none          &none   &trans
+&trans  &trans  &trans             &trans          &trans                &trans  &trans                                      &trans  &trans  &trans               &trans          &trans               &trans  &trans
+&trans  &trans  &kp HOME           &kp UP_ARROW    &kp END               &trans  &trans                                      &none   &none   &kp HOME             &kp UP_ARROW    &kp END              &none   &trans
+&trans  &trans  &hm LEFT_ALT LEFT  &hm LCTRL DOWN  &hm LEFT_SHIFT RIGHT  &trans  &trans  &trans  &trans      &trans  &trans  &none   &none   &hm LEFT_SHIFT LEFT  &hm RCTRL DOWN  &hm RIGHT_ALT RIGHT  &trans  &trans
+&trans  &trans  &kp PG_UP          &trans          &kp PAGE_DOWN         &trans                  &trans      &trans                  &none   &kp PAGE_UP          &none           &kp PAGE_DOWN        &trans  &trans
+&trans  &trans  &trans             &trans          &trans                        &trans  &trans  &trans      &trans  &trans  &trans          &trans               &trans          &none                &none   &trans
             >;
         };
 
         nav_mac {
             bindings = <
-&trans  &trans  &trans     &trans          &trans         &trans  &trans                                      &trans  &trans  &trans       &trans          &trans         &trans  &trans
-&trans  &trans  &mac_sol   &kp UP_ARROW    &mac_eol       &trans  &trans                                      &none   &none   &mac_sol     &kp UP_ARROW    &mac_eol       &none   &trans
-&trans  &trans  &kp LEFT   &kp DOWN_ARROW  &kp RIGHT      &trans  &trans  &trans  &trans      &trans  &trans  &none   &none   &kp LEFT     &kp DOWN_ARROW  &kp RIGHT      &trans  &trans
-&trans  &trans  &kp PG_UP  &trans          &kp PAGE_DOWN  &trans                  &trans      &trans                  &none   &kp PAGE_UP  &none           &kp PAGE_DOWN  &trans  &trans
-&trans  &trans  &trans     &trans          &trans                 &trans  &trans  &trans      &trans  &trans  &trans          &trans       &trans          &none          &none   &trans
+&trans  &trans  &trans             &trans                 &trans                &trans  &trans                                      &trans  &trans  &trans                &trans                        &trans               &trans  &trans
+&trans  &trans  &mac_sol           &kp UP_ARROW           &mac_eol              &trans  &trans                                      &none   &none   &mac_sol              &kp UP_ARROW                  &mac_eol             &none   &trans
+&trans  &trans  &hm LEFT_ALT LEFT  &hm LEFT_CONTROL DOWN  &hm LEFT_SHIFT RIGHT  &trans  &trans  &trans  &trans      &trans  &trans  &none   &none   &hm RIGHT_SHIFT LEFT  &hm RIGHT_CONTROL DOWN_ARROW  &hm RIGHT_ALT RIGHT  &trans  &trans
+&trans  &trans  &kp PG_UP          &trans                 &kp PAGE_DOWN         &trans                  &trans      &trans                  &none   &kp PAGE_UP           &none                         &kp PAGE_DOWN        &trans  &trans
+&trans  &trans  &trans             &trans                 &trans                        &trans  &trans  &trans      &trans  &trans  &trans          &trans                &trans                        &none                &none   &trans
             >;
         };
 
