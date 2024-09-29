@@ -211,21 +211,21 @@
 
         nav {
             bindings = <
-&trans  &trans  &trans             &trans          &trans                &trans                &trans                                      &trans  &trans                 &trans               &trans          &trans               &trans  &trans
-&trans  &trans  &kp HOME           &kp UP_ARROW    &kp END               &kp LEFT_BRACE        &trans                                      &none   &kp RIGHT_BRACE        &kp HOME             &kp UP_ARROW    &kp END              &none   &trans
-&trans  &trans  &hm LEFT_ALT LEFT  &hm LCTRL DOWN  &hm LEFT_SHIFT RIGHT  &kp LEFT_BRACKET      &trans  &trans  &trans      &trans  &trans  &none   &kp RIGHT_BRACKET      &hm LEFT_SHIFT LEFT  &hm RCTRL DOWN  &hm RIGHT_ALT RIGHT  &trans  &trans
-&trans  &trans  &kp PG_UP          &none           &kp PAGE_DOWN         &kp LEFT_PARENTHESIS                  &trans      &trans                  &kp RIGHT_PARENTHESIS  &kp PAGE_UP          &none           &kp PAGE_DOWN        &trans  &trans
-&trans  &trans  &trans             &trans          &trans                                      &trans  &trans  &trans      &trans  &trans  &trans                         &trans               &trans          &none                &none   &trans
+&trans  &trans  &trans         &trans          &trans     &trans                &trans                                      &trans  &trans                 &trans               &trans          &trans               &trans  &trans
+&trans  &trans  &kp HOME       &kp UP_ARROW    &kp END    &kp LEFT_BRACE        &trans                                      &none   &kp RIGHT_BRACE        &kp HOME             &kp UP_ARROW    &kp END              &none   &trans
+&trans  &trans  &kp LEFT       &kp DOWN_ARROW  &kp RIGHT  &kp LEFT_BRACKET      &trans  &trans  &trans      &trans  &trans  &none   &kp RIGHT_BRACKET      &hm LEFT_SHIFT LEFT  &hm RCTRL DOWN  &hm RIGHT_ALT RIGHT  &trans  &trans
+&trans  &trans  &kp PAGE_DOWN  &none           &kp PG_UP  &kp LEFT_PARENTHESIS                  &trans      &trans                  &kp RIGHT_PARENTHESIS  &kp PAGE_UP          &none           &kp PAGE_DOWN        &trans  &trans
+&trans  &trans  &trans         &trans          &trans                           &trans  &trans  &trans      &trans  &trans  &trans                         &trans               &trans          &none                &none   &trans
             >;
         };
 
         nav_mac {
             bindings = <
-&trans  &trans  &trans             &trans                 &trans                &trans                &trans                                      &trans  &trans                 &trans                &trans                        &trans               &trans  &trans
-&trans  &trans  &mac_sol           &kp UP_ARROW           &mac_eol              &kp LEFT_BRACE        &trans                                      &none   &kp RIGHT_BRACE        &mac_sol              &kp UP_ARROW                  &mac_eol             &none   &trans
-&trans  &trans  &hm LEFT_ALT LEFT  &hm LEFT_CONTROL DOWN  &hm LEFT_SHIFT RIGHT  &kp LEFT_BRACKET      &trans  &trans  &trans      &trans  &trans  &none   &kp RIGHT_BRACKET      &hm RIGHT_SHIFT LEFT  &hm RIGHT_CONTROL DOWN_ARROW  &hm RIGHT_ALT RIGHT  &trans  &trans
-&trans  &trans  &kp PG_UP          &none                  &kp PAGE_DOWN         &kp LEFT_PARENTHESIS                  &trans      &trans                  &kp RIGHT_PARENTHESIS  &kp PAGE_UP           &none                         &kp PAGE_DOWN        &trans  &trans
-&trans  &trans  &trans             &trans                 &trans                                      &trans  &trans  &trans      &trans  &trans  &trans                         &trans                &trans                        &none                &none   &trans
+&trans  &trans  &trans         &trans        &trans     &trans                &trans                                      &trans  &trans                 &trans                &trans                        &trans               &trans  &trans
+&trans  &trans  &mac_sol       &kp UP_ARROW  &mac_eol   &kp LEFT_BRACE        &trans                                      &none   &kp RIGHT_BRACE        &mac_sol              &kp UP_ARROW                  &mac_eol             &none   &trans
+&trans  &trans  &kp LEFT       &kp DOWN      &kp RIGHT  &kp LEFT_BRACKET      &trans  &trans  &trans      &trans  &trans  &none   &kp RIGHT_BRACKET      &hm RIGHT_SHIFT LEFT  &hm RIGHT_CONTROL DOWN_ARROW  &hm RIGHT_ALT RIGHT  &trans  &trans
+&trans  &trans  &kp PAGE_DOWN  &none         &kp PG_UP  &kp LEFT_PARENTHESIS                  &trans      &trans                  &kp RIGHT_PARENTHESIS  &kp PAGE_UP           &none                         &kp PAGE_DOWN        &trans  &trans
+&trans  &trans  &trans         &trans        &trans                           &trans  &trans  &trans      &trans  &trans  &trans                         &trans                &trans                        &none                &none   &trans
             >;
         };
 
