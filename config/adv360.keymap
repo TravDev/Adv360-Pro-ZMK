@@ -106,7 +106,9 @@
         mac_toggle: mac_toggle {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap>, <&out OUT_BLE &bt BT_SEL 1 &to 1>;
+            bindings = 
+              <&macro_tap>, 
+              <&out OUT_BLE &bt BT_SEL 1 &to 1>;
 
             label = "MAC_TOGGLE";
         };
@@ -114,7 +116,9 @@
         win_toggle: win_toggle {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap>, <&out OUT_USB &to 0>;
+            bindings = 
+              <&macro_tap>, 
+              <&out OUT_USB &to 0>;
 
             label = "WIN_TOGGLE";
         };
