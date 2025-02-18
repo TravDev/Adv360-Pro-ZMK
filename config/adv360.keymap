@@ -52,6 +52,15 @@
             #binding-cells = <0>;
             mods = <(MOD_RSFT)>;
         };
+
+        win_mac_toggle: win_mac_toggle {
+            compatible = "zmk,behavior-mod-morph";
+            label = "WIN_MAC_TOGGLE";
+            bindings = <&left_sys_ble>, <&mac_toggle>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL)>;
+        };
     };
 
     macros {
@@ -146,6 +155,22 @@
 
             label = "WIN_DSKTP_RIGHT";
         };
+
+        left_sys_ble: left_sys_ble {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap>, <&out OUT_BLE &bt BT_SEL 2 &to 1>;
+
+            label = "LEFT_SYS_BLE";
+        };
+
+        right_sys_ble: right_sys_ble {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap>, <&out OUT_BLE &bt BT_SEL 3 &to 1>;
+
+            label = "RIGHT_SYS_BLE";
+        };
     };
 
     combos {
@@ -166,6 +191,7 @@
         c_sublime_replace {
             bindings = <&kp LC(H)>;
             key-positions = <18 35>;
+            layers = <0>;
         };
 
         mac_c_home {
@@ -180,9 +206,10 @@
             layers = <1>;
         };
 
-        underscore {
-            bindings = <&kp UNDER>;
-            key-positions = <41 70>;
+        mac_sublime_replace {
+            bindings = <&kp LA(LG(F))>;
+            key-positions = <18 35>;
+            layers = <1>;
         };
     };
 
@@ -191,21 +218,21 @@
 
         default_layer {
             bindings = <
-&kp ESCAPE      &kp N1          &kp N2          &kp N3              &kp N4            &kp N5  &tog 6                                                                 &mo 5        &kp N6  &kp N7             &kp N8               &kp N9           &kp N0              &kp MINUS
-&kp TAB         &kp Q           &kp W           &kp E               &kp R             &kp T   &to 1                                                                  &none        &kp Y   &kp U              &kp I                &kp O            &kp P               &kp BSLH
-&mo 2           &hm LEFT_GUI A  &hm LEFT_ALT S  &hm LEFT_CONTROL D  &hm LEFT_SHIFT F  &kp G   &mac_toggle  &kp LCTRL  &mt LEFT_ALT ENTER      &kp LGUI   &lt 2 ESC   &kp MINUS    &kp H   &hm RIGHT_SHIFT J  &hm RIGHT_CONTROL K  &hm RIGHT_ALT L  &hm RIGHT_GUI SEMI  &kp SQT
-&kp LEFT_SHIFT  &kp Z           &kp X           &kp C               &kp V             &kp B                           &kp HOME                &kp PG_UP                           &kp N   &kp M              &kp COMMA            &kp DOT          &kp FSLH            &kp EQUAL
-&mo 4           &kp SPACE       &kp GRAVE       &kp LEFT            &kp RIGHT                 &kp BSPC     &kp DEL    &kp END                 &kp PG_DN  &kp RETURN  &snake_case          &kp UP             &kp DOWN             &kp LBKT         &kp RBKT            &hm RIGHT_SHIFT CAPSLOCK
+&kp ESCAPE      &kp N1          &kp N2          &kp N3              &kp N4            &kp N5  &tog 6                                                                     &mo 5           &kp N6  &kp N7             &kp N8               &kp N9           &kp N0              &kp MINUS
+&kp TAB         &kp Q           &kp W           &kp E               &kp R             &kp T   &out OUT_USB                                                               &none           &kp Y   &kp U              &kp I                &kp O            &kp P               &kp BSLH
+&mo 2           &hm LEFT_GUI A  &hm LEFT_ALT S  &hm LEFT_CONTROL D  &hm LEFT_SHIFT F  &kp G   &win_mac_toggle  &kp LCTRL  &mt LEFT_ALT ENTER      &kp LGUI   &lt 2 ESC   &right_sys_ble  &kp H   &hm RIGHT_SHIFT J  &hm RIGHT_CONTROL K  &hm RIGHT_ALT L  &hm RIGHT_GUI SEMI  &kp SQT
+&kp LEFT_SHIFT  &kp Z           &kp X           &kp C               &kp V             &kp B                               &kp HOME                &kp PG_UP                              &kp N   &kp M              &kp COMMA            &kp DOT          &kp FSLH            &kp EQUAL
+&mo 4           &kp SPACE       &kp GRAVE       &kp LEFT            &kp RIGHT                 &kp BSPC         &kp DEL    &kp END                 &kp PG_DN  &kp RETURN  &snake_case             &kp UP             &kp DOWN             &kp LBKT         &kp RBKT            &hm RIGHT_SHIFT CAPSLOCK
             >;
         };
 
         mac_osx {
             bindings = <
-&kp ESCAPE      &kp N1          &kp N2          &kp N3       &kp N4            &kp N5  &tog 6                                                                       &mo 5        &kp N6  &kp N7             &kp N8               &kp N9           &kp N0              &kp MINUS
-&kp TAB         &kp Q           &kp W           &kp E        &kp R             &kp T   &to 0                                                                        &none        &kp Y   &kp U              &kp I                &kp O            &kp P               &kp BSLH
-&mo 3           &hm LEFT_GUI A  &hm LEFT_ALT S  &hm LCTRL D  &hm LEFT_SHIFT F  &kp G   &win_toggle  &kp LEFT_GUI  &mt LEFT_CONTROL ENTER      &kp LGUI   &lt 3 ESC  &kp MINUS    &kp H   &hm RIGHT_SHIFT J  &hm RIGHT_CONTROL K  &hm RIGHT_ALT L  &hm RIGHT_GUI SEMI  &kp SQT
-&kp LEFT_SHIFT  &kp Z           &kp X           &kp C        &kp V             &kp B                              &mac_sol                    &kp PG_UP                          &kp N   &kp M              &kp COMMA            &kp DOT          &kp FSLH            &kp EQUAL
-&mo 4           &kp SPACE       &kp GRAVE       &kp LEFT     &kp RIGHT                 &kp BSPC     &kp DEL       &mac_eol                    &kp PG_DN  &kp ENTER  &snake_case          &kp UP             &kp DOWN             &kp LBKT         &kp RBKT            &hm RIGHT_SHIFT CAPSLOCK
+&kp ESCAPE      &kp N1          &kp N2          &kp N3       &kp N4            &kp N5  &tog 6                                                                          &mo 5        &kp N6  &kp N7             &kp N8               &kp N9           &kp N0              &kp MINUS
+&kp TAB         &kp Q           &kp W           &kp E        &kp R             &kp T   &to 0                                                                           &none        &kp Y   &kp U              &kp I                &kp O            &kp P               &kp BSLH
+&mo 3           &hm LEFT_GUI A  &hm LEFT_ALT S  &hm LCTRL D  &hm LEFT_SHIFT F  &kp G   &win_toggle  &kp LEFT_GUI  &mt LEFT_CONTROL ENTER      &kp LGUI   &kp LEFT_ALT  &kp MINUS    &kp H   &hm RIGHT_SHIFT J  &hm RIGHT_CONTROL K  &hm RIGHT_ALT L  &hm RIGHT_GUI SEMI  &kp SQT
+&kp LEFT_SHIFT  &kp Z           &kp X           &kp C        &kp V             &kp B                              &mac_sol                    &kp PG_UP                             &kp N   &kp M              &kp COMMA            &kp DOT          &kp FSLH            &kp EQUAL
+&mo 4           &kp SPACE       &kp GRAVE       &kp LEFT     &kp RIGHT                 &kp BSPC     &kp DEL       &mac_eol                    &kp PG_DN  &kp ENTER     &snake_case          &kp UP             &kp DOWN             &kp LBKT         &kp RBKT            &hm RIGHT_SHIFT CAPSLOCK
             >;
         };
 
